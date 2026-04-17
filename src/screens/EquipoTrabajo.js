@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     name: {
         fontSize: 22,
         fontWeight: '700',
-        color: '#ffffff',
+        color: '#000000',
     },
     price: {
         fontSize: 20,
@@ -50,8 +50,22 @@ const styles = StyleSheet.create({
     description: {
         fontSize: 17,
         marginTop: 20,
-        color: '#ffffff',
+        color: '#000000',
         lineHeight: 22,
+    },
+    title: {
+        fontSize: 24,
+        fontWeight: '700',
+        color: '#f1b61f',
+        textAlign: 'center',
+        marginTop: 20,
+    },
+    logo: {
+        width: 250,
+        height: 250,
+        marginTop: 20,
+        alignSelf: 'center',
+        resizeMode: 'contain'
     },
     button: {
         backgroundColor: '#f1b61f',

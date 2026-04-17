@@ -1,13 +1,9 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Ionicons } from "@expo/vector-icons";
 
 import HomeScreen from "../screens/HomeScreen";
-import ProductListScreen from "../screens/ProductListScreen";
-import ProductDetailScreen from "../screens/ProductDetailScreen";
-import CartScreen from "../screens/CartScreen";
-import ProfileScreen from "../screens/ProfileScreen";
 import Componentes from "../screens/Componentes";
 import DescripcionProyecto from "../screens/DescripcionProyecto";
 import EquipoTrabajo from "../screens/EquipoTrabajo";

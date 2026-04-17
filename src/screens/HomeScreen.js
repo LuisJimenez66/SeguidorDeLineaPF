@@ -3,11 +3,11 @@ import { View, Text, Button, Image, ScrollView, TouchableOpacity, StyleSheet} fr
 export default function HomeScreen({ navigation }) {
     return (
         <ScrollView style={styles.container}>
-            <Image source={require('../../assets/logo1SF3.png')} style={styles.logo} />
-            <Image source={{ uri: "https://www.autonocion.com/wp-content/uploads/2019/06/Mustang-electric-1960-2.jpg"}} style={styles.banner} />
             <Text style={styles.sectionTitle}>Carrito seguidor de linea</Text>
+            <Text style={styles.sectionTitle}>..::SATAN::..</Text>
+            <Image source={require('../../assets/satan2.jpeg')} style={styles.banner} />
             <Text style={styles.sectionTitle}>Equipo 6</Text>
-            <Image style={styles.banner} source={{uri: "https://cdn.dealeraccelerate.com/ab/1/1264/53855/1920x1440/1970-chevrolet-c10"}} />
+            <Image source={require('../../assets/satanplaca.jpeg')} style={styles.banner} />
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DescripcionProyecto')}>
                 <Text style={styles.buttonText}>Descripcion del proyecto</Text>
             </TouchableOpacity>
@@ -20,6 +20,7 @@ export default function HomeScreen({ navigation }) {
             <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Conclusiones')}>
                 <Text style={styles.buttonText}>Ver conclusiones</Text>
             </TouchableOpacity>
+            
         </ScrollView>
     );
 }
