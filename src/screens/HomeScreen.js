@@ -5,25 +5,21 @@ export default function HomeScreen({ navigation }) {
         <ScrollView style={styles.container}>
             <Image source={require('../../assets/logo1SF3.png')} style={styles.logo} />
             <Image source={{ uri: "https://www.autonocion.com/wp-content/uploads/2019/06/Mustang-electric-1960-2.jpg"}} style={styles.banner} />
-            <Text style={styles.sectionTitle}>Productos destacados</Text>
-            <View style={styles.productsPreview}>
-                <TouchableOpacity style={styles.productCard} onPress={() => navigation.navigate('ProductDetail', { name: 'Rines mustang', price: '200', image: "https://www.alpaimports.com/cdn/shop/files/w12k_2048x.jpg?v=1697319142", descripcion: 'Rines para mustang con tapas y todo' })}>
-                    <Image source={{ uri: "https://www.alpaimports.com/cdn/shop/files/w12k_2048x.jpg?v=1697319142"}} style={styles.productImage} />
-                    <Text style={styles.productName}>Rines mustang</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.productCard} onPress={() => navigation.navigate('ProductDetail', { name: 'Faros chevrolet', price: '150', image: "https://http2.mlstatic.com/D_NQ_NP_620185-MLM87145102067_072025-O.webp", descripcion: 'Faros para una chevrolet pick up 1970' })}>
-                    <Image source={{ uri: "https://http2.mlstatic.com/D_NQ_NP_620185-MLM87145102067_072025-O.webp"}} style={styles.productImage} />
-                    <Text style={styles.productName}>Faros chevrolet</Text>
-                </TouchableOpacity>
-            </View>
+            <Text style={styles.sectionTitle}>Carrito seguidor de linea</Text>
+            <Text style={styles.sectionTitle}>Equipo 6</Text>
             <Image style={styles.banner} source={{uri: "https://cdn.dealeraccelerate.com/ab/1/1264/53855/1920x1440/1970-chevrolet-c10"}} />
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('ProductList')}>
-                <Text style={styles.buttonText}>Ver catalogo</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DescripcionProyecto')}>
+                <Text style={styles.buttonText}>Descripcion del proyecto</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Cart')}>
-                <Text style={styles.buttonText}>Ver mi carrito</Text>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Componentes')}>
+                <Text style={styles.buttonText}>Ver componentes</Text>
             </TouchableOpacity>
-
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Funcionamiento')}>
+                <Text style={styles.buttonText}>Ver funcionamiento</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Conclusiones')}>
+                <Text style={styles.buttonText}>Ver conclusiones</Text>
+            </TouchableOpacity>
         </ScrollView>
     );
 }
