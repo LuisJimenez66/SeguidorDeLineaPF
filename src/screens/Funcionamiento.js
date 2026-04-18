@@ -4,12 +4,27 @@ export default function Funcionamiento({ navigation}) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.title}>Funcionamiento</Text>
-            <Text style={styles.description}>Bueno Erik .-Programador</Text>
-            <Text style={styles.description}>Guillen Jose .-Analista</Text>
-            <Text style={styles.description}>Jimenez Luis .-Diseñador</Text>
-            <Text style={styles.description}>Lomas Edson .-Tester</Text>
-            <Text style={styles.description}>Meraz Fernando .-Programador</Text>
-            <Image source={require('../../assets/equipofoto.jpeg')} style={styles.logo} />
+
+            <Text style={styles.descriptionBold}>¿Cómo detecta la línea?</Text>
+            <Text style={styles.description}>Los sensores de línea (por ejemplo, sensores IR) miden la reflectancia del suelo. Una línea más oscura refleja menos luz que el fondo, por lo que el sensor detecta un cambio en la señal cuando está sobre la línea.</Text>
+
+            <Text style={styles.descriptionBold}>¿Cómo responde al cambio de trayectoria?</Text>
+            <Text style={styles.description}>El microcontrolador compara lecturas de múltiples sensores (izquierda, centro, derecha). Según qué sensor detecte la línea, ajusta la velocidad de cada motor para corregir la trayectoria (ej.: si la línea se desplaza a la izquierda, reducir la velocidad del motor izquierdo o girar a la derecha).</Text>
+
+            <Text style={styles.descriptionBold}>Flujo básico de funcionamiento</Text>
+            <Text style={styles.description}>1. Leer sensores de línea continuamente.</Text>
+            <Text style={styles.description}>2. Determinar posición relativa de la línea (izquierda/centro/derecha).</Text>
+            <Text style={styles.description}>3. Ejecutar rutina de control (p. ej. control proporcional simple o reglas IF) para calcular señales a los motores.</Text>
+            <Text style={styles.description}>4. Enviar señales PWM/direccionales al driver de motores.</Text>
+            <Text style={styles.description}>5. Repetir el ciclo continuamente hasta finalizar la prueba.</Text>
+
+            <Text style={styles.descriptionBold}>Etapas del proceso</Text>
+            <Text style={styles.description}>- Inicialización: encendido y calibración básica de sensores.</Text>
+            <Text style={styles.description}>- Detección: lectura y filtrado de sensores.</Text>
+            <Text style={styles.description}>- Decisión: algoritmo de control que determina acción.</Text>
+            <Text style={styles.description}>- Actuación: envío de señales al driver de motores.</Text>
+            <Text style={styles.description}></Text>
+
         </ScrollView>
     );
 }
@@ -27,56 +42,30 @@ const styles = StyleSheet.create({
         marginTop: 20,
         alignSelf: 'center',
         borderRadius: 12,
-    },
-    infoContainer: {
-        padding: 20,
-        backgroundColor: '#090909',
-        borderRadius: 12,
-        height: 250,
-        width: '95%',
-        alignSelf: 'center',
-        marginTop: 20,  
-    },
-    name: {
-        fontSize: 22,
-        fontWeight: '700',
-        color: '#000000',
-    },
-    price: {
-        fontSize: 20,
-        marginTop: 5,
-        color: '#ffffff',
-    },  
+    }, 
     description: {
         fontSize: 17,
         marginTop: 20,
         color: '#000000',
         lineHeight: 22,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    descriptionBold: {
+        fontSize: 18,
+        marginTop: 18,
+        color: '#000000',
+        fontWeight: '700',
+        marginLeft: 15,
     },
     title: {
-        fontSize: 24,
-        fontWeight: '700',
-        color: '#f1b61f',
+        fontSize: 26,
+        fontWeight: '800',
+        color: '#b2002d',
         textAlign: 'center',
         marginTop: 20,
-    },
-    logo: {
-        width: 250,
-        height: 250,
-        marginTop: 20,
-        alignSelf: 'center',
-        resizeMode: 'contain'
-    },
-    button: {
-        backgroundColor: '#f1b61f',
-        padding: 15,
-        borderRadius: 8,
-        marginTop: 20,
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: '#000000',
-        fontSize: 16,
-        fontWeight: "600",
+        textShadowColor: '#300010',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 3,
     },
 });

@@ -28,7 +28,7 @@ export default function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#000000',
+        backgroundColor: '#ffffff',
     },
     logo: {
         width: 250,
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         fontSize: 24,
         fontWeight: 'bold',
         textAlign: 'center',
-        color: '#f1b61f',
+        color: '#c1001a',
     },
     banner: {
         width: '90%',
@@ -52,10 +52,19 @@ const styles = StyleSheet.create({
     },
     sectionTitle: {
         fontSize: 22,
-        fontWeight: "bold",
-        color: '#f1b61f',
-        marginTop: 30,
-        marginLeft: 20,
+        fontWeight: "800",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 2,
+        marginBottom: 10,
+        marginTop: 20,
+        fontSize: 26,
+        fontWeight: '800',
+        color: '#a8001f',
+        textAlign: 'center',
+        marginTop: 20,
+        textShadowColor: '#330007',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 4,
     },
     productsPreview: {
         flexDirection: 'row',
@@ -76,7 +85,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     button: {
-        backgroundColor: '#000000',
+        backgroundColor: '#24000f',
         width: 200,
         height: 50,
         justifyContent: 'center',
@@ -84,11 +93,11 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         alignSelf: 'center',
         margin: 10,
-        borderColor: '#f1b61f',
+        borderColor: '#6b0018',
         borderWidth: 2,
     },
     buttonText: {
-        color: '#fff',
+        color: '#fdecec',
         fontSize: 16,
         fontWeight: 'bold',
     },

@@ -3,13 +3,31 @@ import {View,Text,Image,StyleSheet,ScrollView, TouchableOpacity} from 'react-nat
 export default function Creditos({ navigation}) {
     return (
         <ScrollView style={styles.container}>
-            <Text style={styles.title}>Equipo 6</Text>
-            <Text style={styles.description}>Bueno Erik .-Programador</Text>
-            <Text style={styles.description}>Guillen Jose .-Analista</Text>
-            <Text style={styles.description}>Jimenez Luis .-Diseñador</Text>
-            <Text style={styles.description}>Lomas Edson .-Tester</Text>
-            <Text style={styles.description}>Meraz Fernando .-Programador</Text>
-            <Image source={require('../../assets/equipofoto.jpeg')} style={styles.logo} />
+            <Text style={styles.title}>Créditos</Text>
+
+            <Text style={styles.descriptionBold}>Grupo</Text>
+            <Text style={styles.description}>5 B BIS</Text>
+
+            <Text style={styles.descriptionBold}>Integrantes</Text>
+            <Text style={styles.description}>- Erik Gabriel Bueno Cao Romero </Text>
+            <Text style={styles.description}>- Guillen Lopez Jose Alberto</Text>
+            <Text style={styles.description}>- Jimenez Delgado Luis Hector</Text>
+            <Text style={styles.description}>- Lomas Corral Edson </Text>
+            <Text style={styles.description}>- Meraz Sida Fernando </Text>
+
+            <Text style={styles.descriptionBold}>Materia</Text>
+            <Text style={styles.description}>Desarrollo de Aplicaciones Moviles</Text>
+
+            <Text style={styles.descriptionBold}>Docente</Text>
+            <Text style={styles.description}>Ana Laura Lara Chairez</Text>
+
+            <Text style={styles.descriptionBold}>Cuatrimestre</Text>
+            <Text style={styles.description}>5</Text>
+
+            <Text style={styles.descriptionBold}>Fecha de entrega</Text>
+            <Text style={styles.description}>24 Abril 2026</Text>
+            <Text style={styles.description}></Text>
+
         </ScrollView>
     );
 }
@@ -37,46 +55,28 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         marginTop: 20,  
     },
-    name: {
-        fontSize: 22,
-        fontWeight: '700',
-        color: '#000000',
-    },
-    price: {
-        fontSize: 20,
-        marginTop: 5,
-        color: '#ffffff',
-    },  
     description: {
         fontSize: 17,
         marginTop: 20,
         color: '#000000',
         lineHeight: 22,
+        marginLeft: 20,
+    },
+    descriptionBold: {
+        fontSize: 18,
+        marginTop: 18,
+        color: '#000000',
+        fontWeight: '700',
+        marginLeft: 15,
     },
     title: {
-        fontSize: 24,
-        fontWeight: '700',
-        color: '#f1b61f',
+        fontSize: 26,
+        fontWeight: '800',
+        color: '#a8001f',
         textAlign: 'center',
         marginTop: 20,
-    },
-    logo: {
-        width: 250,
-        height: 250,
-        marginTop: 20,
-        alignSelf: 'center',
-        resizeMode: 'contain'
-    },
-    button: {
-        backgroundColor: '#f1b61f',
-        padding: 15,
-        borderRadius: 8,
-        marginTop: 20,
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: '#000000',
-        fontSize: 16,
-        fontWeight: "600",
+        textShadowColor: '#330007',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 4,
     },
 });

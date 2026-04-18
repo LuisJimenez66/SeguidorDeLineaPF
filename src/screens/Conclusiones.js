@@ -4,12 +4,21 @@ export default function Conclusiones({ navigation}) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.title}>Conclusiones</Text>
-            <Text style={styles.description}>Bueno Erik .-Programador</Text>
-            <Text style={styles.description}>Guillen Jose .-Analista</Text>
-            <Text style={styles.description}>Jimenez Luis .-Diseñador</Text>
-            <Text style={styles.description}>Lomas Edson .-Tester</Text>
-            <Text style={styles.description}>Meraz Fernando .-Programador</Text>
-            <Image source={require('../../assets/equipofoto.jpeg')} style={styles.logo} />
+
+            <Text style={styles.descriptionBold}>Aprendizajes del equipo</Text>
+            <Text style={styles.description}>Durante el desarrollo aprendimos sobre integración de sensores con el microcontrolador, control básico de motores, calibración de sensores de línea y diseño mecánico del chasis.</Text>
+
+            <Text style={styles.descriptionBold}>Dificultades presentadas</Text>
+            <Text style={styles.description}>Se presentaron desafíos en la calibración de los sensores en distintas superficies, ajustes de PID/algoritmos de control para evitar oscilaciones y suministro estable de energía a los motores.</Text>
+
+            <Text style={styles.descriptionBold}>Posibles mejoras futuras</Text>
+            <Text style={styles.description}>- Implementar un control PID más robusto para mejorar la estabilidad.</Text>
+            <Text style={styles.description}>- Añadir más sensores para mayor precisión en curvas cerradas.</Text>
+            <Text style={styles.description}>- Mejorar el chasis y la distribución de peso para mejor tracción.</Text>
+            <Text style={styles.description}>- Integrar comunicación inalámbrica para telemetría y ajustes en tiempo real.</Text>
+            <Text style={styles.description}></Text>
+
+
         </ScrollView>
     );
 }
@@ -28,55 +37,29 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
         borderRadius: 12,
     },
-    infoContainer: {
-        padding: 20,
-        backgroundColor: '#090909',
-        borderRadius: 12,
-        height: 250,
-        width: '95%',
-        alignSelf: 'center',
-        marginTop: 20,  
-    },
-    name: {
-        fontSize: 22,
-        fontWeight: '700',
-        color: '#000000',
-    },
-    price: {
-        fontSize: 20,
-        marginTop: 5,
-        color: '#ffffff',
-    },  
     description: {
         fontSize: 17,
         marginTop: 20,
         color: '#000000',
         lineHeight: 22,
+        marginLeft: 20,
+        marginRight: 20,
+    },
+    descriptionBold: {
+        fontSize: 18,
+        marginTop: 18,
+        color: '#000000',
+        fontWeight: '700',
+        marginLeft: 15,
     },
     title: {
-        fontSize: 24,
-        fontWeight: '700',
-        color: '#f1b61f',
+        fontSize: 26,
+        fontWeight: '800',
+        color: '#b3002a',
         textAlign: 'center',
         marginTop: 20,
-    },
-    logo: {
-        width: 250,
-        height: 250,
-        marginTop: 20,
-        alignSelf: 'center',
-        resizeMode: 'contain'
-    },
-    button: {
-        backgroundColor: '#f1b61f',
-        padding: 15,
-        borderRadius: 8,
-        marginTop: 20,
-        alignItems: 'center',
-    },
-    buttonText: {
-        color: '#000000',
-        fontSize: 16,
-        fontWeight: "600",
+        textShadowColor: '#220009',
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 3,
     },
 });
