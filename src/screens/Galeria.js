@@ -1,11 +1,23 @@
 import {View,Text,Image,StyleSheet,ScrollView, TouchableOpacity} from 'react-native';
+import YoutubePlayer from "react-native-youtube-iframe";
 
 export default function Galeria({ navigation}) {
     return (
         <ScrollView style={styles.container}>
             <Text style={styles.title}>Galería</Text>
 
-            <Text style={styles.description}>Aquí agregar fotografías y material visual del proyecto</Text>
+            <Image source={require('../../assets/satan2.jpeg')} style={styles.image} />
+            <Image source={require('../../assets/satanrueda1.jpeg')} style={styles.image} />
+            <Image source={require('../../assets/satanplaca.jpeg')} style={styles.image} />
+            <Image source={require('../../assets/satanrueda2.jpeg')} style={styles.image} />
+            <View style={styles.vid}>
+                <YoutubePlayer 
+                    height={250}
+                    play={false}
+                    videoId={"0pIKmULjk38"} 
+                />
+            </View>
+            
 
         </ScrollView>
     );
@@ -18,9 +30,9 @@ const styles = StyleSheet.create({
     },
     image: {
         borderColor: '#000000',
-        borderWidth: 4,
-        width: '95%',
-        height: 350,
+        borderWidth: 2,
+        width: '90%',
+        height: 200,
         marginTop: 20,
         alignSelf: 'center',
         borderRadius: 12,
@@ -49,4 +61,11 @@ const styles = StyleSheet.create({
         textShadowOffset: { width: 1, height: 1 },
         textShadowRadius: 4,
     },
+    vid: {
+        marginTop: 20,
+        marginBottom: 30,
+        width: '90%',
+        height: 180,
+        alignSelf: 'center',
+    }
 });
