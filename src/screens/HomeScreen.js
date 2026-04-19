@@ -1,109 +1,121 @@
-import { View, Text, Button, Image, ScrollView, TouchableOpacity, StyleSheet} from 'react-native';
+import React from 'react';
+import { View, Text, Image, ScrollView, TouchableOpacity, StyleSheet, SafeAreaView, StatusBar } from 'react-native';
 
 export default function HomeScreen({ navigation }) {
     return (
-        <ScrollView style={styles.container}>
-            <Text style={styles.sectionTitle}>Carrito seguidor de linea</Text>
-            <Text style={styles.sectionTitle}>..::SATAN::..</Text>
-            <Image source={require('../../assets/satan2.jpeg')} style={styles.banner} />
-            <Text style={styles.sectionTitle}>Equipo 6</Text>
-            <Image source={require('../../assets/satanplaca.jpeg')} style={styles.banner} />
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DescripcionProyecto')}>
-                <Text style={styles.buttonText}>Descripcion del proyecto</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Componentes')}>
-                <Text style={styles.buttonText}>Ver componentes</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Funcionamiento')}>
-                <Text style={styles.buttonText}>Ver funcionamiento</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Conclusiones')}>
-                <Text style={styles.buttonText}>Ver conclusiones</Text>
-            </TouchableOpacity>
-            
-        </ScrollView>
+        <SafeAreaView style={styles.safeArea}>
+            <StatusBar barStyle="light-content" backgroundColor="#0a0a0a" />
+            <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+                
+                <View style={styles.headerContainer}>
+                    <Text style={styles.subtitle}>Carrito seguidor de línea</Text>
+                    <Text style={styles.mainTitle}>SATAN</Text>
+                </View>
+                
+                <Image source={require('../../assets/satan2.jpeg')} style={styles.banner} />
+                
+                <Text style={styles.teamTitle}>Equipo 6</Text>
+                <Image source={require('../../assets/satanplaca.jpeg')} style={styles.banner} />
+                
+                <View style={styles.buttonContainer}>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('DescripcionProyecto')}>
+                        <Text style={styles.buttonText}>Descripción del proyecto</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Componentes')}>
+                        <Text style={styles.buttonText}>Ver componentes</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Funcionamiento')}>
+                        <Text style={styles.buttonText}>Ver funcionamiento</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Conclusiones')}>
+                        <Text style={styles.buttonText}>Ver conclusiones</Text>
+                    </TouchableOpacity>
+                </View>
+                
+            </ScrollView>
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
+    safeArea: {
+        flex: 1,
+        backgroundColor: '#0a0a0a',
+    },
     container: {
         flex: 1,
-        backgroundColor: '#ffffff',
+        backgroundColor: '#0a0a0a',
     },
-    logo: {
-        width: 250,
-        height: 250,
+    contentContainer: {
+        paddingBottom: 40,
+        paddingHorizontal: 20,
+    },
+    headerContainer: {
         marginTop: 20,
-        alignSelf: 'center',
-        resizeMode: 'contain'
+        marginBottom: 20,
+        alignItems: 'center',
     },
-    title: {
-        fontSize: 24,
+    subtitle: {
+        fontSize: 14,
+        fontWeight: '600',
+        color: '#888888',
+        textTransform: 'uppercase',
+        letterSpacing: 2,
+        marginBottom: 5,
+    },
+    mainTitle: {
+        fontSize: 48,
+        fontWeight: '900',
+        color: '#ff2a2a',
+        letterSpacing: 6,
+        textShadowColor: 'rgba(255, 42, 42, 0.5)',
+        textShadowOffset: { width: 0, height: 0 },
+        textShadowRadius: 15,
+    },
+    teamTitle: {
+        fontSize: 18,
         fontWeight: 'bold',
+        color: '#ffffff',
         textAlign: 'center',
-        color: '#c1001a',
+        marginTop: 30,
+        marginBottom: 15,
+        letterSpacing: 3,
+        textTransform: 'uppercase',
     },
     banner: {
-        width: '90%',
-        height: 180,
-        marginTop: 20,
+        width: '100%',
+        height: 200,
         alignSelf: 'center',
-        borderRadius: 12,
-    },
-    sectionTitle: {
-        fontSize: 22,
-        fontWeight: "800",
-        textShadowOffset: { width: 1, height: 1 },
-        textShadowRadius: 2,
+        borderRadius: 16,
+        borderWidth: 1,
+        borderColor: '#2a2a2a',
         marginBottom: 10,
-        marginTop: 20,
-        fontSize: 26,
-        fontWeight: '800',
-        color: '#a8001f',
-        textAlign: 'center',
-        marginTop: 20,
-        textShadowColor: '#330007',
-        textShadowOffset: { width: 1, height: 1 },
-        textShadowRadius: 4,
     },
-    productsPreview: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
+    buttonContainer: {
         marginTop: 20,
-    },
-    productCard: {
-        width: 150,
-        height: 150,
-        backgroundColor: '#fff',
-        borderRadius: 10,
-        justifyContent: 'center',
         alignItems: 'center',
-        elevation: 3,
-    },
-    productName: {
-        fontSize: 16,
-        fontWeight: 'bold',
+        gap: 15,
     },
     button: {
-        backgroundColor: '#24000f',
-        width: 200,
-        height: 50,
+        backgroundColor: '#121212',
+        width: '100%',
+        height: 55,
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 10,
-        alignSelf: 'center',
-        margin: 10,
-        borderColor: '#6b0018',
-        borderWidth: 2,
+        borderRadius: 12,
+        borderWidth: 1,
+        borderColor: '#ff2a2a',
+        shadowColor: '#ff2a2a',
+        shadowOffset: { width: 0, height: 4 },
+        shadowOpacity: 0.3,
+        shadowRadius: 5,
+        elevation: 6,
     },
     buttonText: {
-        color: '#fdecec',
-        fontSize: 16,
+        color: '#ffffff',
+        fontSize: 15,
         fontWeight: 'bold',
-    },
-    productImage: {
-        width: 100,
-        height: 100,
-        marginBottom: 10,
+        textTransform: 'uppercase',
+        letterSpacing: 1.5,
     },
 });
