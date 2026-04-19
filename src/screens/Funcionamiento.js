@@ -6,15 +6,15 @@ export default function Funcionamiento({ navigation}) {
             <Text style={styles.title}>Funcionamiento</Text>
 
             <Text style={styles.descriptionBold}>¿Cómo detecta la línea?</Text>
-            <Text style={styles.description}>Los sensores de línea (por ejemplo, sensores IR) miden la reflectancia del suelo. Una línea más oscura refleja menos luz que el fondo, por lo que el sensor detecta un cambio en la señal cuando está sobre la línea.</Text>
+            <Text style={styles.description}>Los sensores de línea (Tcrt5000) miden la reflectancia del suelo. Una línea más oscura refleja menos luz que el fondo, por lo que el sensor detecta un cambio en la señal cuando está sobre la línea.</Text>
 
             <Text style={styles.descriptionBold}>¿Cómo responde al cambio de trayectoria?</Text>
-            <Text style={styles.description}>El microcontrolador compara lecturas de múltiples sensores (izquierda, centro, derecha). Según qué sensor detecte la línea, ajusta la velocidad de cada motor para corregir la trayectoria (ej.: si la línea se desplaza a la izquierda, reducir la velocidad del motor izquierdo o girar a la derecha).</Text>
+            <Text style={styles.description}>El microcontrolador (ESP32) compara lecturas de múltiples sensores (izquierda, centro, derecha). Según qué sensor detecte la línea, ajusta la velocidad de cada motor para corregir la trayectoria.</Text>
 
             <Text style={styles.descriptionBold}>Flujo básico de funcionamiento</Text>
             <Text style={styles.description}>1. Leer sensores de línea continuamente.</Text>
             <Text style={styles.description}>2. Determinar posición relativa de la línea (izquierda/centro/derecha).</Text>
-            <Text style={styles.description}>3. Ejecutar rutina de control (p. ej. control proporcional simple o reglas IF) para calcular señales a los motores.</Text>
+            <Text style={styles.description}>3. Ejecutar rutinas de control (sentencias if) para calcular señales a los motores.</Text>
             <Text style={styles.description}>4. Enviar señales PWM/direccionales al driver de motores.</Text>
             <Text style={styles.description}>5. Repetir el ciclo continuamente hasta finalizar la prueba.</Text>
 

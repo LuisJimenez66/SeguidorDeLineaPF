@@ -6,7 +6,7 @@ export default function Conclusiones({ navigation}) {
             <Text style={styles.title}>Conclusiones</Text>
 
             <Text style={styles.descriptionBold}>Aprendizajes del equipo</Text>
-            <Text style={styles.description}>Durante el desarrollo aprendimos sobre integración de sensores con el microcontrolador, control básico de motores, calibración de sensores de línea y diseño mecánico del chasis.</Text>
+            <Text style={styles.description}>Durante el desarrollo aprendimos sobre integración de sensores con el microcontrolador, control básico de motores y calibración de sensores de línea.</Text>
 
             <Text style={styles.descriptionBold}>Dificultades presentadas</Text>
             <Text style={styles.description}>Se presentaron desafíos en la calibración de los sensores en distintas superficies, ajustes de PID/algoritmos de control para evitar oscilaciones y suministro estable de energía a los motores.</Text>

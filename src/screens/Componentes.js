@@ -7,22 +7,29 @@ export default function Componentes({ navigation}) {
 
             <Text style={styles.descriptionBold}>Lista de componentes</Text>
             <Text style={styles.description}>- Chasis: Estructura que soporta todos los componentes y proporciona la base mecánica del carrito.</Text>
-            <Text style={styles.description}>- Motores DC (2): Proveen el movimiento a las ruedas; controlados por un driver de motor.</Text>
-            <Text style={styles.description}>- Controlador de motores (driver): Permite controlar dirección y velocidad de los motores desde el microcontrolador.</Text>
-            <Text style={styles.description}>- Sensor(s) de línea (infrarrojo): Detectan contraste entre la línea y el fondo para guiar el carrito.</Text>
+            <Text style={styles.description}>- Motores DC (2): Proveen el movimiento a las ruedas controlados por un driver de motor.</Text>
+            <Text style={styles.description}>- Porta pilas (AA): Soporta y conecta las baterías al circuito.</Text>
             <Text style={styles.description}>- Ruedas: Montadas en los motores para permitir el desplazamiento.</Text>
-            <Text style={styles.description}>- Batería: Fuente de alimentación para motores y electrónica (por ejemplo, pack de baterías Li-ion o pilas recargables).</Text>
-            <Text style={styles.description}>- Microcontrolador (por ejemplo Arduino, ESP32): Ejecuta la lógica de control y procesa señales de los sensores.</Text>
-            <Text style={styles.description}>- Cables y conectores: Interconexión entre sensores, microcontrolador y driver de motores.</Text>
-            <Text style={styles.description}>- (Opcional) Módulo controlador/Shield: Facilita conexiones entre microcontrolador y drivers/motores.</Text>
+            <Text style={styles.description}>- 4 Pilas (AA): Proporcionan alimentación a los motores.</Text>
+            <Text style={styles.description}>- Tuercas y tornillos: Para ensamblar los componentes.</Text>
+            <Image source={require('../../assets/chasis.webp')} style={styles.image} />
 
-            <Text style={styles.descriptionBold}>Función de cada componente</Text>
-            <Text style={styles.description}>- Chasis: Soporte estructural.</Text>
-            <Text style={styles.description}>- Motores: Generan torque para mover las ruedas.</Text>
-            <Text style={styles.description}>- Driver: Recibe señales PWM/direccionales del microcontrolador y entrega corriente a los motores.</Text>
-            <Text style={styles.description}>- Sensores de línea: Proveen lectura digital/analógica del estado de la superficie (línea/no línea).</Text>
-            <Text style={styles.description}>- Microcontrolador: Toma decisiones y genera señales de control.</Text>
-            <Text style={styles.description}></Text>
+
+            <Text style={styles.description}>- Sensores de línea (Tcrt5000): Detectan contraste entre la línea y el fondo para guiar el carrito.</Text>
+            <Image source={require('../../assets/sensor.webp')} style={styles.image} />
+            <Text style={styles.description}>- Powerbank: Fuente de alimentación para el microcontrolador.</Text>
+            <Image source={require('../../assets/pwr.jpg')} style={styles.image} />
+            <Text style={styles.description}>- Microcontrolador (ESP32): Ejecuta la lógica de control y procesa señales de los sensores.</Text>
+            <Image source={require('../../assets/esp.jpg')} style={styles.image} />
+            <Text style={styles.description}>- Cables (Jumpers y USB-A -- USBMicro ): Interconexión entre sensores, microcontrolador y driver de motores.</Text>
+            <Image source={require('../../assets/jumpers.jpg')} style={styles.image} />
+            <Image source={require('../../assets/usb.jpg')} style={styles.image} />
+            <Text style={styles.description}>- Puente H (L298N): Controla la dirección y velocidad de los motores.</Text>
+            <Image source={require('../../assets/puente.webp')} style={styles.image} />
+            <Text style={styles.description}>- 3 Pantallas OLED (0.96 pulgadas): Dan diseño visual al carrito.</Text>
+            <Image source={require('../../assets/oled.webp')} style={styles.image} />
+            
+            
 
         </ScrollView>
     );
@@ -35,8 +42,8 @@ const styles = StyleSheet.create({
     },
     image: {
         borderColor: '#000000',
-        borderWidth: 4,
-        width: '95%',
+        borderWidth: 2,
+        width: '90%',
         height: 350,
         marginTop: 20,
         alignSelf: 'center',
