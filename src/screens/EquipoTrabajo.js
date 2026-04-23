@@ -18,7 +18,7 @@ export default function EquipoTrabajo({ navigation }) {
             <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
                 
                 <View style={styles.header}>
-                    <Text style={styles.title}>EQUIPO 6</Text>
+                    <Text style={styles.title}>ESCUADRON VELOCIDAD</Text>
                     <Text style={styles.subtitle}>LOS ARTÍFICES DE SATÁN</Text>
                 </View>
 
@@ -69,6 +69,7 @@ const styles = StyleSheet.create({
         textShadowColor: 'rgba(255, 42, 42, 0.7)',
         textShadowOffset: { width: 0, height: 0 },
         textShadowRadius: 20,
+        textAlign: 'center',
     },
     subtitle: {
         fontSize: 12,

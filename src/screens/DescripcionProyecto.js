@@ -14,7 +14,7 @@ export default function DescripcionProyecto({ navigation }) {
 
                 <View style={styles.section}>
                     <Text style={styles.descriptionBold}>¿Qué es el carrito seguidor de línea?</Text>
-                    <Text style={styles.description}>Es un vehículo móvil pequeño diseñado para seguir una ruta marcada en el suelo usando sensores que detectan el contraste.</Text>
+                    <Text style={styles.description}>Es un vehículo móvil pequeño diseñado para seguir una ruta marcada en el suelo usando sensores que detectan el contraste de la luz.</Text>
                 </View>
 
                 <View style={styles.section}>

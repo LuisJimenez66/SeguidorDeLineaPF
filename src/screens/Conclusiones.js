@@ -14,7 +14,7 @@ export default function Conclusiones({ navigation }) {
                         <View style={styles.redIndicator} />
                         <Text style={styles.descriptionBold}>APRENDIZAJES DEL EQUIPO</Text>
                     </View>
-                    <Text style={styles.description}>Durante el desarrollo aprendimos sobre integración de sensores con el microcontrolador, control básico de motores y calibración de sensores de línea.</Text>
+                    <Text style={styles.description}>Durante el desarrollo aprendimos la manera en que se conectan las corrientes electricas ademas de desarrarrollar habilidades en programacion.</Text>
                 </View>
 
                 <View style={styles.card}>
@@ -22,7 +22,7 @@ export default function Conclusiones({ navigation }) {
                         <View style={styles.redIndicator} />
                         <Text style={styles.descriptionBold}>DIFICULTADES PRESENTADAS</Text>
                     </View>
-                    <Text style={styles.description}>Se presentaron desafíos en la calibración de los sensores en distintas superficies, ajustes de PID y algoritmos de control para evitar oscilaciones, así como el suministro estable de energía a los motores.</Text>
+                    <Text style={styles.description}>Se presentaron desafíos en la calibración de los sensores ya que nuestra base estaba rota.</Text>
                 </View>
 
                 <View style={styles.card}>
@@ -30,10 +30,9 @@ export default function Conclusiones({ navigation }) {
                         <View style={styles.redIndicator} />
                         <Text style={styles.descriptionBold}>POSIBLES MEJORAS FUTURAS</Text>
                     </View>
-                    <Text style={styles.listItem}>• Implementar un control PID más robusto para mejorar la estabilidad.</Text>
-                    <Text style={styles.listItem}>• Añadir más sensores para mayor precisión en curvas cerradas.</Text>
+                    <Text style={styles.listItem}>• Añadir un giroscopio para mejor mapeado</Text>
+                    <Text style={styles.listItem}>• Ademas más sensores para mayor precisión en curvas cerradas.</Text>
                     <Text style={styles.listItem}>• Mejorar el chasis y la distribución de peso para mejor tracción.</Text>
-                    <Text style={styles.listItem}>• Integrar comunicación inalámbrica para telemetría y ajustes en tiempo real.</Text>
                 </View>
 
             </ScrollView>

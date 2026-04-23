@@ -14,7 +14,7 @@ export default function HomeScreen({ navigation }) {
                 
                 <Image source={require('../../assets/satan2.jpeg')} style={styles.banner} />
                 
-                <Text style={styles.teamTitle}>Equipo 6</Text>
+                <Text style={styles.teamTitle}>Escuadron Velocidad</Text>
                 <Image source={require('../../assets/satanplaca.jpeg')} style={styles.banner} />
                 
                 <View style={styles.buttonContainer}>
